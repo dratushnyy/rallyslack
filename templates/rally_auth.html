@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rally2Slack2Rally</title>
+</head>
+<body>
+    <div align="center">
+        <form action="{{rally_auth_url}}" method="POST">
+            <strong> CA Rally Login </strong>
+            <hr/>
+            <div>
+                <input type="text" name="login_user" value="{{login_user}}" hidden="hidden">
+                <button type="submit">Authorize integration</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
