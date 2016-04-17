@@ -5,9 +5,8 @@ from flask import session
 from flask import redirect
 from requests_oauthlib import OAuth2Session
 from connection import process_user_command
-from rally import get_rally_user_info
+from connection import get_rally_user_info
 from settings import SlackConfig, ApiConfig, RallyConfig
-
 
 from user import is_user_exists, update_rally_user_token, \
     update_rally_user_info
