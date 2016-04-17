@@ -1,4 +1,4 @@
-# CA Agile Rally integration with Slack messenger
+# CA Agile Central (Rally) integration with Slack messenger
   - More about [Rally]
   - More about [Slack]
 
