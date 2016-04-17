@@ -21,7 +21,9 @@ def get_rally_user_info(access_token):
 def get_user_stories(access_token, user_name):
     rally = Rally(apikey=access_token, user=user_name)
     data = []
-    query = "Owner = {}".format(user_name)
+    query = ["Owner = {}".format(user_name),
+             "ScheduleState != \"Completed\"",
+             "ScheduleState != \"Accepted\""]
     result = rally.get("HierarchicalRequirement", fetch=True, query=query)
     for item in result:
         project = getattr(item, "Project")
