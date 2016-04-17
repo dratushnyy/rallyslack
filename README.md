@@ -8,10 +8,11 @@
   - [Rally application]
   - Some server to host the code
   - Valid SSL certificate
-         Since Slack demand to use ssl connection, there are two options to do it:
-         Use CA signed certificate.
-         [CloudFlare] certificate for connection between Slack and your host and self-signed certificate for connection between CloudFlare and your host
-
+         
+    Since Slack demand to use ssl connection, there are two options to do it:
+    1. Use CA signed certificate.
+    2. [CloudFlare] certificate for connection between Slack and your host and self-signed certificate for connection between CloudFlare and your host
+    
 # Supported commands in Slack
     - /rally us[all] - list userstories
    
