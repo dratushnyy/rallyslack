@@ -54,9 +54,6 @@ def process_user_command(user_id, team_id, command, reply_to):
     rally_user = get_rally_user(user_key)
     command = getattr(rally, rally.RALLY_COMMANDS[command])
     result = command(rally_token, rally_user)
-    requests.post(reply_to, json={
-        "text": "Here you go:",
-        "attachments": [{
-                "text": "\n".join(result)
-            }]
-    })
+    requests.post(reply_to, json={"text": "Here you go:",
+                                  "attachments": result
+                                  })
