@@ -1,4 +1,4 @@
-# CA Agile Central (Rally) integration with Slack messenger
+## CA Agile Central (Rally) integration with Slack messenger
   - More about [Rally]
   - More about [Slack]
 
@@ -12,7 +12,7 @@
     1. Use CA signed certificate.
     2. [CloudFlare] certificate for connection between Slack and your host and self-signed certificate for connection between CloudFlare and your host
     
-# Supported commands in Slack
+## Supported commands in Slack
     - /rally us[all] - list userstories
    
  
