@@ -7,7 +7,9 @@
   - [Rally] account
   - [Rally application]
   - Some server to host the code
-  - Valid SSL certificate
+  - Valid SSL certificate.
+  
+  
     Since Slack demand to use ssl connection, there are two options to do it:
     1. Use CA signed certificate.
     2. [CloudFlare] certificate for connection between Slack and your host and self-signed certificate for connection between CloudFlare and your host
