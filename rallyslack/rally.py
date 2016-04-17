@@ -1,4 +1,3 @@
-import html2text as html2text
 import requests
 from pyral import Rally
 from settings import RallyConfig
