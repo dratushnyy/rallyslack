@@ -4,13 +4,22 @@ from pyral import Rally
 
 class RallyListUserStories(object):
     RALLY_URL = "https://rally1.rallydev.com"
-    ARGS = ["all", "completed", "accepted"]
+    ALLOWED_ARGS = ["all", "completed", "accepted", "defined", "progress"]
 
     @staticmethod
     def _build_query(user_name, *args):
-        query = ["Owner = {}".format(user_name),
-                 "ScheduleState != \"Completed\"",
-                 "ScheduleState != \"Accepted\""]
+        query = ["Owner = {}".format(user_name)]
+        if not args:
+            query.append("ScheduleState != \"Completed\"")
+            query.append("ScheduleState != \"Accepted\"")
+            return query
+        us_filter = args[0]
+        if us_filter == "all":
+            return query
+        if us_filter in RallyListUserStories.ALLOWED_ARGS:
+                state = "In-Progress" if us_filter == "progress" else \
+                    us_filter.capitalize()
+                query.append("ScheduleState = \"{}\"".format(state))
         return query
 
     def __call__(self, access_token, user_name, *args):

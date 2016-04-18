@@ -63,9 +63,8 @@ def process_user_command(user_id, team_id, command_string, reply_to):
                 "text": ":confused: I am sorry, but I don't know what to do "
                         "with '{}'".format(cmd)
             })
-
     result = rally_commands.get_command(cmd)(rally_token, rally_user,
-                                             command_args)
+                                             *command_args)
     requests.post(reply_to, json={"text": "Here you go:",
                                   "attachments": result
                                   })
