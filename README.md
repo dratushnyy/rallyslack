@@ -16,8 +16,7 @@
     
 ## Supported commands in Slack
     - /rally us [all|defined|progress|completed|accepted] - show userstories. 
-    
-    By default show US which are in "Defined" and "In Progress" states
+      By default show US which are in "Defined" and "In Progress" states
     
     - /rally  - show help for commands
     - /rally help - show help for commands
