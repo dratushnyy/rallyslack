@@ -1,4 +1,4 @@
-Flask==0.10.1
+flask>=0.12.3
 redis==2.10.5
 requests==2.20.0
 rq==0.5.6
